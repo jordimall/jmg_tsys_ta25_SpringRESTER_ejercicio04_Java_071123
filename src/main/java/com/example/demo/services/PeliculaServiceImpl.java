@@ -15,18 +15,18 @@ import com.example.demo.dto.Pelicula;
  * 
  */
 @Service
-public class PeliculaServiceImpl implements IPeliculaService{
-	
+public class PeliculaServiceImpl implements IPeliculaService {
+
 	@Autowired
-	IPeliculaDAO daoFabricante;
-	
+	IPeliculaDAO daoPelicula;
+
 	/**
 	 * Deveuelve todos los peliculas
 	 * 
 	 * @return List<Pelicula>
 	 */
-	public List<Pelicula> getAllPelicula(){
-		return daoFabricante.findAll();
+	public List<Pelicula> getAllPelicula() {
+		return daoPelicula.findAll();
 	}
 
 	/**
@@ -36,7 +36,7 @@ public class PeliculaServiceImpl implements IPeliculaService{
 	 * @return Pelicula
 	 */
 	public Pelicula getIdPelicula(int id) {
-		return daoFabricante.findById(id).get();
+		return daoPelicula.findById(id).get();
 	};
 
 	/**
@@ -46,7 +46,7 @@ public class PeliculaServiceImpl implements IPeliculaService{
 	 * @return Pelicula
 	 */
 	public Pelicula addPelicula(Pelicula pelicula) {
-		return daoFabricante.save(pelicula);
+		return daoPelicula.save(pelicula);
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class PeliculaServiceImpl implements IPeliculaService{
 	 * @return Pelicula
 	 */
 	public Pelicula updatePelicula(Pelicula pelicula) {
-		return daoFabricante.save(pelicula);
+		return daoPelicula.save(pelicula);
 	};
 
 	/**
@@ -65,7 +65,7 @@ public class PeliculaServiceImpl implements IPeliculaService{
 	 * @param id
 	 */
 	public void deletePelicula(int id) {
-		daoFabricante.deleteById(id);
+		daoPelicula.deleteById(id);
 	}
 
 }
