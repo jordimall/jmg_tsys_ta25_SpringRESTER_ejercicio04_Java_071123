@@ -18,53 +18,53 @@ import com.example.demo.dto.Sala;
 public class SalaServiceImpl implements ISalaService {
 
 	@Autowired
-	ISalaDAO daoArticulo;
+	ISalaDAO daoSala;
 
 	/**
-	 * Deveuelve todos los articulos
+	 * Deveuelve todos los salas
 	 * 
 	 * @return List<Sala>
 	 */
-	public List<Sala> getAllArticulo() {
-		return daoArticulo.findAll();
+	public List<Sala> getAllSala() {
+		return daoSala.findAll();
 	}
 
 	/**
-	 * Devuelve un articulo en especifico
+	 * Devuelve un sala en especifico
 	 * 
 	 * @param id
 	 * @return Sala
 	 */
-	public Sala getIdArticulo(int id) {
-		return daoArticulo.findById(id).get();
+	public Sala getIdSala(int id) {
+		return daoSala.findById(id).get();
 	}
 
 	/**
-	 * Añade un articulo a la base de datos
+	 * Añade un sala a la base de datos
 	 * 
 	 * @param sala
 	 * @return Sala
 	 */
-	public Sala addArticulo(Sala sala) {
-		return daoArticulo.save(sala);
+	public Sala addSala(Sala sala) {
+		return daoSala.save(sala);
 	}
 
 	/**
-	 * Actualiza un articulo
+	 * Actualiza un sala
 	 * 
 	 * @param sala
-	 * @return Articulos
+	 * @return Sala
 	 */
-	public Sala updateArticulo(Sala sala) {
-		return daoArticulo.save(sala);
+	public Sala updateSala(Sala sala) {
+		return daoSala.save(sala);
 	}
 
 	/**
-	 * Elimina un articulo
+	 * Elimina un sala
 	 * 
 	 * @param id
 	 */
-	public void deleteArticulo(int id) {
-		daoArticulo.deleteById(id);
+	public void deleteSala(int id) {
+		daoSala.deleteById(id);
 	}
 }
